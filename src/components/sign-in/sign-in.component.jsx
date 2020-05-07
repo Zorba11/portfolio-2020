@@ -32,12 +32,12 @@ class SignIn extends React.Component{
                 <h2>I already have an account</h2>
                 <span>Sig in with your email and password</span>
 
-                <FormInput onSubmit={this.handleSubmit}>
-                    <input name='email' type='email' value={this.state.email} handleChange={this.handleChange} required />
-                    <input name='password' type='password' value={this.state.password} handleChange={this.handleChange} required />
+                <form onSubmit={this.handleSubmit}>
+                    <FormInput name='email' type='email' value={this.state.email} label='email' handleChange={this.handleChange} required />
+                    <FormInput name='password' type='password' value={this.state.password} label='password' handleChange={this.handleChange} required />
 
                     <input type='submit' value='submit form' />
-                 </FormInput>
+                 </form>
             </div>
         )
     }
